@@ -11,8 +11,15 @@ export const loadDataSuccess = (data) => {
     }
 }
 
-export const loadDataFailure = () => {
+export const loadDataUARequest = () => {
     return {
-        type: 'LOAD_DATA_FAILURE'
+        type: 'LOAD_DATA_UA_REQUEST'
+    }
+}
+
+export const loadDataUASuccess = (data) => {
+    return {
+        type: 'LOAD_DATA_UA_SUCCESS',
+        data
     }
 }

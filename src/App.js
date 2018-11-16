@@ -3,6 +3,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import indexSaga from './sagas/index'
 import Info from './Info'
+import UserAgent from './UserAgent'
 
 import reducers from './reducers/index'
 
@@ -26,6 +27,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Info />
+          <UserAgent />
         </div>
       </Provider>
     )

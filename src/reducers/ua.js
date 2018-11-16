@@ -5,10 +5,18 @@ const INICIAL_STATE = {
 }
 
 const ua = (state = INICIAL_STATE, action) => {
-    if (action.type === 'LOAD_UA_REQUEST') {
+    if (action.type === 'LOAD_DATA_UA_REQUEST') {
         return {
             isFetching: true,
             data: [],
+            error: false
+        }
+    }
+
+    if (action.type === 'LOAD_DATA_UA_SUCCESS') {
+        return {
+            isFetching: false,
+            data: action.data,
             error: false
         }
     }
